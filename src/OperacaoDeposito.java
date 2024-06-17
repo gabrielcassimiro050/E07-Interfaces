@@ -1,4 +1,4 @@
-public class OperacaoDeposito extends Operacao{
+public class OperacaoDeposito extends Operacao implements ITaxas{
     public OperacaoDeposito(double valor){
         this.setValor(valor);
         this.setTipo('d');
