@@ -1,4 +1,4 @@
-public class ContaCorrente extends Conta{
+public class ContaCorrente extends Conta implements ITaxas{
 
     ContaCorrente(int numero, Cliente dono, double saldo, double limite){
         super(numero, dono, saldo, limite);
@@ -9,5 +9,9 @@ public class ContaCorrente extends Conta{
             limite = -100;
 
         setLimite(limite);
+    }
+
+    public double calculaTaxas() {
+        return 0;
     }
 }

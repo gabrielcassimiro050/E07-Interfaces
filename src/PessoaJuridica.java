@@ -1,4 +1,4 @@
-public class PessoaJuridica extends Cliente{
+public class PessoaJuridica extends Cliente implements ITaxas{
     private String cnpj;
     private int numFuncionarios;
     private String setor;

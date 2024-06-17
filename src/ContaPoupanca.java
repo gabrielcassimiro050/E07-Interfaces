@@ -1,4 +1,4 @@
-public class ContaPoupanca extends Conta{
+public class ContaPoupanca extends Conta implements ITaxas{
 
     ContaPoupanca(int numero, Cliente dono, double saldo, double limite){
         super(numero, dono, saldo, limite);
@@ -10,5 +10,9 @@ public class ContaPoupanca extends Conta{
         if(limite > 1000)
             limite = 1000;
         setLimite(limite);
+    }
+
+    public double calculaTaxas() {
+        return 0;
     }
 }
