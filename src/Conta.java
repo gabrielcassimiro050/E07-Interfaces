@@ -1,4 +1,4 @@
-public abstract class Conta implements extratoTaxas{
+public abstract class Conta implements ITaxas{
 
     private int numero;
 
@@ -140,5 +140,22 @@ public abstract class Conta implements extratoTaxas{
     public boolean equals(Object obj){
         Conta contaComparada = (Conta) obj;
         return contaComparada.getNumero() == this.numero;
+    }
+
+    public void imprimirExtratoTaxas() {
+        double t = 0;
+        System.out.println("============Extrato de Taxas============");
+        System.out.println("Taxa de Manunteção: " + calculaTaxas());
+
+        Operacao[] op = getOperacoes();
+        for (int i = 0; i < op.length; ++i) {
+            if (op[i] != null && op[i].getTipo() == 's') {
+                System.out.println("Saque: R$" + op[i].calculaTaxas());
+                t += op[i].calculaTaxas();
+            }
+        }
+
+        System.out.println();
+        System.out.println("Taxa de Saque Total: R$" + t);
     }
 }
