@@ -1,4 +1,4 @@
-public abstract class Conta{
+public abstract class Conta implements extratoTaxas{
 
     private int numero;
 
@@ -95,20 +95,6 @@ public abstract class Conta{
     }
 
 
-    public void imprimirExtratoTaxas(){
-        float t = 0;
-        System.out.println("============Extrato de Taxas============");
-        System.out.println("Taxa de Manunteção: " + dono.calculaTaxas());
-        for(int i = 0; i < operacoes.length; ++i){
-            if(operacoes[i]!= null && operacoes[i].getTipo() == 's'){
-                System.out.println("Saque: R$" +operacoes[i].calculaTaxas());
-                t+=operacoes[i].calculaTaxas();
-            }
-        }
-        System.out.println();
-        System.out.println("Taxa de Saque Total: R$" + t);
-    }
-
     public int getNumero() {
         return numero;
     }
@@ -135,6 +121,10 @@ public abstract class Conta{
 
     public void setDono(Cliente dono) {
         this.dono = dono;
+    }
+
+    public Operacao[] getOperacoes() {
+        return operacoes;
     }
 
     public abstract void setLimite(double limite);
