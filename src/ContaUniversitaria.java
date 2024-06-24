@@ -1,4 +1,4 @@
-public class ContaUniversitaria extends Conta implements ITaxas{
+public class ContaUniversitaria extends Conta{
 
     ContaUniversitaria(int numero, Cliente dono, double saldo, double limite) {
         super(numero, dono, saldo, limite);

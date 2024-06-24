@@ -1,6 +1,6 @@
 import java.util.Date;
 
-public class PessoaFisica extends Cliente implements ITaxas{
+public class PessoaFisica extends Cliente{
     private String cpf;
     private int idade;
     private char sexo;

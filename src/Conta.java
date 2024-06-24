@@ -143,7 +143,7 @@ public abstract class Conta implements ITaxas{
     }
 
     public void imprimirExtratoTaxas() {
-        double t = 0;
+        double t = calculaTaxas();
         System.out.println("============Extrato de Taxas============");
         System.out.println("Taxa de Manunteção: " + calculaTaxas());
 

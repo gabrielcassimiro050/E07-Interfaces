@@ -1,4 +1,4 @@
-public class ContaPoupanca extends Conta implements ITaxas{
+public class ContaPoupanca extends Conta{
 
     ContaPoupanca(int numero, Cliente dono, double saldo, double limite){
         super(numero, dono, saldo, limite);

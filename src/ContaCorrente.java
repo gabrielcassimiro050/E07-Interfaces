@@ -1,4 +1,4 @@
-public class ContaCorrente extends Conta implements ITaxas{
+public class ContaCorrente extends Conta{
 
     ContaCorrente(int numero, Cliente dono, double saldo, double limite){
         super(numero, dono, saldo, limite);
